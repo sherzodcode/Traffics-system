@@ -15,9 +15,9 @@ app.use('/', smsRoutes)
 
 
 app.get('/', (req: Request, res: Response) => {
-    res.render('news')
+    res.render('home')
 })
 
-app.listen(8080, () => {
+app.listen(8070, () => {
     console.log("Server is running");
 })
