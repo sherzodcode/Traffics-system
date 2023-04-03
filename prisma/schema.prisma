@@ -11,3 +11,14 @@ datasource db {
 }
 
 
+model Sms {
+  id Int @id @default(autoincrement())
+  your_number String
+  sendedAt DateTime @default(now())
+  payedAt DateTime @default(now())
+  price String
+  traffic String
+  client_number String
+  status String @default("Error")
+}
+

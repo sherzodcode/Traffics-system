@@ -18,6 +18,6 @@ app.get('/', (req: Request, res: Response) => {
     res.render('home')
 })
 
-app.listen(8070, () => {
+app.listen(8060, () => {
     console.log("Server is running");
 })
