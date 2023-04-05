@@ -6,6 +6,9 @@ export default async (req: Request, res: Response) => {
     try{
         const sms: addSmsDto = req.body
         
+        await addSms(sms)
+
+        res.redirect('/')
     }catch(err){
         console.log(err);
         return res.status(500).json({
