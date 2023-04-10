@@ -8,12 +8,12 @@
                 Change status
             </a>
         </div>
-        <div class="flow-root ">
+        <div class="flow-root mt-4 mb-4 ">
+            {{#each smsData}}
             <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
 
                 {{!-- CLIENT SECTION --}}
 
-            {{#each smsData}}
                 <li class="py-3 sm:py-4">
                     <div class="flex items-center space-x-4">
                         {{!-- <div class="flex-shrink-0">
@@ -141,8 +141,8 @@
                         </div>
                     </div>
                 </li>
-            {{/each }}
             </ul>
+            {{/each }}
         </div>
     </div>
 </div>

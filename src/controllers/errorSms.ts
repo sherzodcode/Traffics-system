@@ -5,6 +5,10 @@ export default async(req: Request, res: Response) => {
     try{
         const allErrorSms = await findSmsError()
 
+
+        console.log(allErrorSms);
+        
+
         if(!allErrorSms){
             return res.status(500).json({
                 message: "There's no SMS with error status"

@@ -26,7 +26,7 @@ export const findSmsSucces = () => {
 export const findSmsError = () => {
     return prisma.sms.findMany({
         where: {
-            status: "error"
+            status: "Error"
         }
     })
 }
