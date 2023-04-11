@@ -1,148 +1,148 @@
 
-            {{#each smsData}}
-<div class="flex items-center justify-center mt-4 mb-4">
-    <div class="w-full  max-w-md p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
-        <div class="flex items-center justify-between mb-4">
-            <h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white">SMS <span class="text-red-600">Error</span> </h5>
-            <a href="/errors/activate/{{id}}" class="text-sm font-medium text-red-600 hover:underline dark:text-blue-500">
-                Change status
-            </a>
-        </div>
-        <div class="flow-root mt-4 mb-4 ">
-            <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
+{{#each smsData}}
+    <div class="flex items-center justify-center mt-4 mb-4">
+        <div class="w-full  max-w-md p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+            <div class="flex items-center justify-between mb-4">
+                <h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white">SMS <span class="text-red-600">Error</span> </h5>
+                <a href="/errors/activate/{{id}}" class="text-sm font-medium text-red-600 hover:underline dark:text-blue-500">
+                    Change status
+                </a>
+            </div>
+            <div class="flow-root mt-4 mb-4 ">
+                <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
 
-                {{!-- CLIENT SECTION --}}
+                    {{!-- CLIENT SECTION --}}
 
-                <li class="py-3 sm:py-4">
-                    <div class="flex items-center space-x-4">
-                        {{!-- <div class="flex-shrink-0">
-                            <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-1.jpg" alt="Neil image">
-                        </div> --}}
-                        <div class="flex-1 min-w-0">
-                            <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
-                                Mijoz
-                            </p>
-                            <p class="text-sm text-gray-500 truncate dark:text-gray-400">
-                                Mijoz raqami
-                            </p>
+                    <li class="py-3 sm:py-4">
+                        <div class="flex items-center space-x-4">
+                            {{!-- <div class="flex-shrink-0">
+                                <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-1.jpg" alt="Neil image">
+                            </div> --}}
+                            <div class="flex-1 min-w-0">
+                                <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                    Mijoz
+                                </p>
+                                <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                                    Mijoz raqami
+                                </p>
+                            </div>
+                            <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                                {{your_number}}
+                            </div>
                         </div>
-                        <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                            {{your_number}}
+                    </li>
+
+
+                    {{!-- DATE SECTION --}}
+
+                    <li class="py-3 sm:py-4">
+                        <div class="flex items-center space-x-4">
+                            {{!-- <div class="flex-shrink-0">
+                                <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie image">
+                            </div> --}}
+                            <div class="flex-1 min-w-0">
+                                <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                    Sorov yuborilgan
+                                </p>
+                                <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                                    Sorov yuborilgan sanasi
+                                </p>
+                            </div>
+                            <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                                {{sendedAt}}
+                            </div>
                         </div>
-                    </div>
-                </li>
+                    </li>
 
 
-                {{!-- DATE SECTION --}}
+                    {{!-- PAYMENT DATE SECTION --}}
 
-                <li class="py-3 sm:py-4">
-                    <div class="flex items-center space-x-4">
-                        {{!-- <div class="flex-shrink-0">
-                            <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie image">
-                        </div> --}}
-                        <div class="flex-1 min-w-0">
-                            <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
-                                Sorov yuborilgan
-                            </p>
-                            <p class="text-sm text-gray-500 truncate dark:text-gray-400">
-                                Sorov yuborilgan sanasi
-                            </p>
+                    <li class="py-3 sm:py-4">
+                        <div class="flex items-center space-x-4">
+                            {{!-- <div class="flex-shrink-0">
+                                <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-2.jpg" alt="Michael image">
+                            </div> --}}
+                            <div class="flex-1 min-w-0">
+                                <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                    Tolov qilingan
+                                </p>
+                                <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                                    Tolov qilingan sana
+                                </p>
+                            </div>
+                            <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                                {{payedAt}}
+                            </div>
                         </div>
-                        <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                            {{sendedAt}}
+                    </li>
+
+
+                    {{!-- PRICE SECTION --}}
+
+                    <li class="py-3 sm:py-4">
+                        <div class="flex items-center space-x-4">
+                            {{!-- <div class="flex-shrink-0">
+                                <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-4.jpg" alt="Lana image">
+                            </div> --}}
+                            <div class="flex-1 min-w-0">
+                                <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                    Summa
+                                </p>
+                                <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                                    Umumiy hizmat narhi
+                                </p>
+                            </div>
+                            <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                                {{price}}$
+                            </div>
                         </div>
-                    </div>
-                </li>
+                    </li>
 
 
-                {{!-- PAYMENT DATE SECTION --}}
+                    {{!-- TRAFFIC SECTION --}}
 
-                <li class="py-3 sm:py-4">
-                    <div class="flex items-center space-x-4">
-                        {{!-- <div class="flex-shrink-0">
-                            <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-2.jpg" alt="Michael image">
-                        </div> --}}
-                        <div class="flex-1 min-w-0">
-                            <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
-                                Tolov qilingan
-                            </p>
-                            <p class="text-sm text-gray-500 truncate dark:text-gray-400">
-                                Tolov qilingan sana
-                            </p>
+                    <li class="pt-3 pb-0 sm:pt-4">
+                        <div class="flex items-center space-x-4">
+                            {{!-- <div class="flex-shrink-0">
+                                <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="Thomas image">
+                            </div> --}}
+                            <div class="flex-1 min-w-0">
+                                <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                    Traffik
+                                </p>
+                                <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                                    Harid qilingan traffic
+                                </p>
+                            </div>
+                            <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                                {{traffic}}mb
+                            </div>
                         </div>
-                        <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                            {{payedAt}}
-                        </div>
-                    </div>
-                </li>
+                    </li>
 
-
-                {{!-- PRICE SECTION --}}
-
-                <li class="py-3 sm:py-4">
-                    <div class="flex items-center space-x-4">
-                        {{!-- <div class="flex-shrink-0">
-                            <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-4.jpg" alt="Lana image">
-                        </div> --}}
-                        <div class="flex-1 min-w-0">
-                            <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
-                                Summa
-                            </p>
-                            <p class="text-sm text-gray-500 truncate dark:text-gray-400">
-                                Umumiy hizmat narhi
-                            </p>
+                    {{!-- NUMBER CLIENT SECTION --}}
+                    
+                    <li class="pt-3 pb-0 sm:pt-4">
+                        <div class="flex items-center space-x-4">
+                            {{!-- <div class="flex-shrink-0">
+                                <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="Thomas image">
+                            </div> --}}
+                            <div class="flex-1 min-w-0">
+                                <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                    Raqam
+                                </p>
+                                <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                                    Traffik uchun raqam
+                                </p>
+                            </div>
+                            <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                                {{client_number}}
+                            </div>
                         </div>
-                        <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                            {{price}}$
-                        </div>
-                    </div>
-                </li>
-
-
-                {{!-- TRAFFIC SECTION --}}
-
-                <li class="pt-3 pb-0 sm:pt-4">
-                    <div class="flex items-center space-x-4">
-                        {{!-- <div class="flex-shrink-0">
-                            <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="Thomas image">
-                        </div> --}}
-                        <div class="flex-1 min-w-0">
-                            <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
-                                Traffik
-                            </p>
-                            <p class="text-sm text-gray-500 truncate dark:text-gray-400">
-                                Harid qilingan traffic
-                            </p>
-                        </div>
-                        <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                            {{traffic}}mb
-                        </div>
-                    </div>
-                </li>
-
-                {{!-- NUMBER CLIENT SECTION --}}
-                
-                <li class="pt-3 pb-0 sm:pt-4">
-                    <div class="flex items-center space-x-4">
-                        {{!-- <div class="flex-shrink-0">
-                            <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="Thomas image">
-                        </div> --}}
-                        <div class="flex-1 min-w-0">
-                            <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
-                                Raqam
-                            </p>
-                            <p class="text-sm text-gray-500 truncate dark:text-gray-400">
-                                Traffik uchun raqam
-                            </p>
-                        </div>
-                        <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                            {{client_number}}
-                        </div>
-                    </div>
-                </li>
-            </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
-</div>
 
-            {{/each }}
+{{/each }}
