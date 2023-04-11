@@ -5,15 +5,12 @@ export default async (req: Request , res: Response) => {
     try{
         const id  = +req.params.id
 
-        if(!id){
-            return res.status(500).json({
-                message:"there's no SMS with this id"
-            })
-        }
+        console.log(id);
+        
 
         await changeSmsStatus(id)
 
-        res.redirect('errors')
+        res.redirect('/errors')
     }catch(err){
         console.log(err);
         return res.status(500).json({

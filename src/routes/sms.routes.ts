@@ -1,8 +1,9 @@
 import { Router } from "express";
-import { AddSmsPage , SmsCodesPage, SuccesfullyPage, SendingTitlePage, SettingsPage} from "../controllers/getPages";
+import { AddSmsPage , SmsCodesPage,  SendingTitlePage, SettingsPage} from "../controllers/getPages";
 import addSms from "../controllers/addSms";
 import errorSms from "../controllers/errorSms";
 import changeToSucces from "../controllers/changeToSucces";
+import succesSms from "../controllers/succesSms";
 
 const router = Router()
 
@@ -11,7 +12,7 @@ router.post('/add/sms', addSms)
 
 
 router.get('/sms-codes', SmsCodesPage)
-router.get('/success', SuccesfullyPage)
+router.get('/success', succesSms )
 
 router.get('/errors', errorSms)
 router.get('/errors/activate/:id', changeToSucces )
