@@ -6,9 +6,9 @@ export const AddSmsPage = (req: Request, res: Response) => {
     return res.render('add-sms')
 }
 
-export const SmsCodesPage = (req: Request, res: Response) => {
-    return res.render('sms-codes') 
-}
+// export const SmsCodesPage = (req: Request, res: Response) => {
+//     return res.render('sms-codes') 
+// }
 
 
 // export const SuccesfullyPage = (req: Request, res: Response) => {

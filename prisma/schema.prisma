@@ -22,3 +22,10 @@ model Sms {
   status String @default("Error")
 }
 
+model Title {
+  id Int @id @default(autoincrement())
+  nickname String 
+  number String
+  message String
+}
+
