@@ -7,6 +7,7 @@ import succesSms from "../controllers/succesSms";
 import deleteSms from "../controllers/deleteSms";
 import addTitle from "../controllers/addTitle";
 import allTitles from "../controllers/allTitles";
+import deleteTitle from "../controllers/deleteTitle";
 
 const router = Router()
 
@@ -15,6 +16,8 @@ router.post('/add/sms', addSms)
 
 
 router.get('/sms-codes', allTitles)
+router.get('/delete/title/:id', deleteTitle)
+
 router.get('/success', succesSms )
 
 router.get('/errors', errorSms)

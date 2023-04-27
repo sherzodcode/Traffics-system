@@ -26,3 +26,11 @@ export const findByNickname = (nickname: string) => {
 export const allTitles = () => {
     return prisma.title.findMany()
 }
+
+export const deleteTitleById = (id: number) => {
+    return prisma.title.delete({
+        where: {
+            id
+        }
+    })
+}
